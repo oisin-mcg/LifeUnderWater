@@ -4,10 +4,21 @@
  */
 package lifeunderwaterapp;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author CamaraAdmin
  */
 public class LifeUnderWater {
-    
+
+    public static void main(String args[]) {
+
+        SwingUtilities.invokeLater(() -> {
+            LifeUnderWaterGUI frame = new LifeUnderWaterGUI();
+            frame.setVisible(true);
+
+        });
+
+    }
 }
