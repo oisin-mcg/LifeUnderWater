@@ -4,10 +4,29 @@
  */
 package lifeunderwaterapp;
 
-/**
- *
- * @author CamaraAdmin
- */
+import java.util.ArrayList;
+
 public class Pollution {
-    
+    private static class Donors {
+        String name;
+        String email;
+        double amount;
+
+        public Donors(String name, String email, double amount) {
+            this.name = name;
+            this.email = email;
+            this.amount = amount;
+        }
+    }
+
+    private ArrayList<Donors> donations;
+
+    public Pollution() {
+        donations = new ArrayList<>();
+    }
+
+    public void addDonation(String name, String email, double amount) {
+        donations.add(new Donors(name, email, amount));
+    }
+
 }
